@@ -606,7 +606,6 @@ template {
     padding-bottom: 30px;
   }
   .navbar__search {
-    margin-left: auto;
     max-width: 340px;
   }
   .navbar-menu {
@@ -654,8 +653,11 @@ template {
     background-color: #333333;
   }
   .stars {
-    -ms-flex-preferred-size: 13%;
-        flex-basis: 13%;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+  }
+  .hotel {
+    padding-top: 5px;
   }
   .hotel-name {
     -ms-flex-preferred-size: 100%;
@@ -687,6 +689,9 @@ template {
 @media (max-width: 576px) {
   .logo {
     width: 99px;
+  }
+  .hotel {
+    padding-top: 5px;
   }
 }
 
