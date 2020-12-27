@@ -12,3 +12,16 @@ var mySwiper = new Swiper('.swiper-container', {
     onlyInViewport: false,
   },
 })
+
+ymaps.ready(function () {  
+    var map = new ymaps.Map("map", {
+      center: [7.83815533, 98.29879145], 
+      zoom: 17
+    });
+
+    if (map) {
+      ymaps.modules.require(['Placemark', 'Circle'], function (Placemark, Circle) {
+        var placemark = new Placemark([55.37, 35.45]);
+      });
+    }
+  });
