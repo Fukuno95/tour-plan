@@ -25,3 +25,7 @@ ymaps.ready(function () {
       });
     }
   });
+
+
+
+
