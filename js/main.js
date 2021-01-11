@@ -70,6 +70,13 @@ function closeModal(event) {
 
 // Обработка форм
 $(".form").each(function() {
+  $('.phone').ready(function (){
+    $('#phone').mask("+7 (999) 999-99-99");
+  }); 
+  $('.phone-b').ready(function (){
+    $('#phone-b').mask("+7 (999) 999-99-99");
+  }); 
+
   $(this).validate({
   errorClass: "invalid",
   messages: {
@@ -83,9 +90,7 @@ $(".form").each(function() {
   },
   },
 });
-  $('.phone').ready(function (){
-    $('#phone').mask("+7 (999) 999-99-99");
-  }); 
+  
   // Окончание $phone
 });
 
