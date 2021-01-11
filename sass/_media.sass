@@ -16,7 +16,8 @@
         height: 230px
     .footer
         &__input
-            flex-basis: 100%
+            &-group
+                flex-basis: 100%
 @media (max-width: 992px)
     .container,
     .newsletter-wrapper
@@ -62,20 +63,21 @@
         &__card
             margin-bottom: 20px
     .card
-        min-width: 339px
+        width: 339px
         min-height: 255px
         &::before
-            min-width: 339px
+            width: 339px
             min-height: 255px
         &__image
-            min-width: 339px
+            width: 339px
             min-height: 255px
     .footer
         &-wrapper
             grid-template-columns: repeat(6, 1fr)
             grid-row-gap: 38px
         &__input
-            flex-basis: 48%
+            &-group
+                flex-basis: 48%
         &__logo
             grid-row: 1 / 2
             grid-column: span 2
@@ -231,7 +233,11 @@
             min-height: 255px
     .footer
         &__input
-            flex-basis: 100%
+            &-group
+                flex-basis: 100%
+    .service
+        &__ul
+            margin: 0
 @media (max-width: 576px)
     .logo
         width: 99px
@@ -248,7 +254,7 @@
     .subscribe
         width: 100%
     .footer
-        &__wrapper
+        &-wrapper
             grid-template-columns: 1fr
         &__logo
             grid-row: 1
@@ -276,18 +282,44 @@
                 grid-column: 1
         &__info
             flex-direction: row
+        &__form
+            position: relative
         &__button
             float: right
+            position: absolute
+            left: 0
+            margin-top: 30px
         &__send
             flex-direction: column
-            width: 50%
             margin-top: 5px
+            left: 0
+            display: flex
         &__info
             order: -1
             margin-bottom: 15px
             justify-content: flex-start
             width: 100%
+    .service
+        &__list
+            flex-wrap: wrap
+        &__ul
+            margin: 0
+@media (max-width: 465px)
+    .navbar
+        &__search
+            max-width: 300px
+    .service
+        &__list
+            flex-wrap: wrap
+        &__ul
+            margin: 0 0 10px 0
+            flex-wrap: wrap
+        &__icon
+            position: static
 @media (max-width: 320px)
+    .navbar
+        &__search
+            max-width: 240px
     .container
         max-width: 264px
     .slider
@@ -295,3 +327,9 @@
     .hotel
         &__slider
             margin-bottom: 20px
+    .footer
+        &-wrapper
+            grid-template-columns: 1fr
+    .service
+        &__item
+            font-size: 10px

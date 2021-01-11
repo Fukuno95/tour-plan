@@ -68,4 +68,25 @@ function closeModal(event) {
   modalDialog.removeClass("modal__dialog--visible");
 }
 
+// Обработка форм
+$(".form").each(function() {
+  $(this).validate({
+  errorClass: "invalid",
+  messages: {
+    name: "Please specify your name",
+    email: {
+      required: "We need your email address to contact you",
+      email: "Your email address must be in the format of name@domain.com",
+    },
+    phone: {
+      required: "Phone is required",
+  },
+  },
+});
+  $('.phone').ready(function (){
+    $('#phone').mask("+7 (999) 999-99-99");
+  }); 
+  // Окончание $phone
+});
+
 });

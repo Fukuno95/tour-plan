@@ -72,8 +72,10 @@
         text-decoration: none
         color: inherit
     &__input
-        margin-bottom: 15px
-        flex-basis: 48%
+        width: 100%
+        &-group
+            margin-bottom: 15px
+            flex-basis: 48%
     &__message
         max-width: 550px
         height: 123px
@@ -92,21 +94,25 @@
         width: 100%
 
 .service
-    max-width: 1110px
-    margin: auto
-    text-align: center
     &__item
         list-style-type: none
-        margin-left: 18px
+        margin-right: 14px
+    &__ul
+        display: flex
+        padding: 0
+        width: inherit
+        align-items: center
+        text-align: center
+        margin: auto
     &__list
+        margin: 0 auto
+        display: flex
         font-style: normal
         font-weight: normal
         font-size: 12px
         line-height: 15px
-        max-width: 1110px
         position: relative
-        margin-left: auto
-        margin-right: auto
+        align-items: center
     &__icon
         position: absolute
         right: 0
